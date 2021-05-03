@@ -17,7 +17,7 @@ class Article(db.Model):
     date = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
-        return '<Article %r>' % self.id
+        return '<Article  %r>' % self.id
 
 
 @app.route('/')

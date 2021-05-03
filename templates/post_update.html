@@ -1,17 +1,20 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Обновление статьи
+Updating an article
 {% endblock %}
 
 {% block body %}
-<div class="container">
-    <h1>Обновление статьи</h1>
+<div class="container py-5 ">
+    <h1>Updating an article</h1>
     <form method="post">
-        <input  value="{{ article.title }}" type="text" name="title" class="form-control" placeholder="Введите название"><br>
-        <textarea  name="intro" id="intro" class="form-control" placeholder="Введите анонс">{{article.intro}}</textarea><br>
-        <textarea  name="text" id="text" class="form-control" placeholder="Введите основной текст">{{article.text}}</textarea><br>
-        <input type="submit" class="btn btn-success" value="Обновить"><br>
+        <input  value="{{ article.title }}" type="text" name="title" class="form-control" placeholder="Enter the title"><br>
+        <textarea  name="intro" id="intro" class="form-control" placeholder="Enter the intro">{{article.intro}}</textarea><br>
+        <textarea  name="text" id="text" class="form-control" placeholder="Enter the text">{{article.text}}</textarea><br>
+        <input type="submit" class="btn btn-success" value="Update"><br>
     </form>
 </div>
+    <p></p>
+    <br>
+    <p></p>
 {% endblock %}

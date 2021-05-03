@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Статьи
+Articles
 {% endblock %}
 
 {% block body %}
-<div class="container">
-    <h1>Все статьи на сайте</h1>
+<div class="container py-5 ">
+    <h1>All of the articles</h1>
 
     {% if articles|length > 0 %}
         {% for el in articles %}
@@ -14,13 +14,16 @@
             <hr>
             <h2>{{ el.title }}</h2>
             <p>{{ el.intro }}</p>
-            <p><b>Дата: {{ el.date.date() }}</b></p>
-            <a href="/posts/{{ el.id }}" class="btn btn-warning">Детальнее</a>
+            <p><b>Date: {{ el.date.date() }}</b></p>
+            <a href="/posts/{{ el.id }}" class="btn btn-warning">Details</a>
 
         </div>
         {% endfor %}
+    <p></p>
+    <br>
+    <p></p>
     {% else %}
-    <p>На сайте ещё нет статей</p>
+    <p>There are no articles yet</p>
     {% endif %}
 </div>
 {% endblock %}
